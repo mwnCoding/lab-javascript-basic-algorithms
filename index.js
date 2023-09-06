@@ -85,7 +85,7 @@ Maecenas vel dolor feugiat, accumsan augue tincidunt, iaculis justo. Proin sit a
 Aenean eget tellus felis. In et ipsum sed libero finibus imperdiet non vitae turpis. Duis mattis et lectus vitae laoreet. Quisque auctor nisi nunc, quis fermentum lacus dapibus in. Aliquam erat volutpat. Praesent vehicula tortor at lectus vulputate, ac feugiat lectus faucibus. Aenean bibendum neque sit amet vehicula volutpat. In blandit ultrices ullamcorper. Proin viverra id lectus sed blandit. Fusce non dui sed diam ultrices elementum. Cras sit amet tortor quis dui placerat egestas a in quam. Suspendisse suscipit mi arcu, nec sagittis tellus egestas et. Morbi ac dui ut nunc tempor congue a sed purus. Suspendisse pellentesque gravida lacus id semper. Morbi tincidunt suscipit justo eu vestibulum.`
 
 function countWords(text) {
-    //Sorry I didn't feel like making an array or string with all the non word characters and then make my check on that.
+    //Sorry I didn't feel like making an array or string with all the non word characters and then make my check on that. I kept it as basic as possible
     const onlyLetterRegex = /[a-zA-Z]+/;
     let counter = 0;
 
@@ -117,3 +117,5 @@ function countEt(text) {
 }
 
 console.log(countEt(longText));
+
+
