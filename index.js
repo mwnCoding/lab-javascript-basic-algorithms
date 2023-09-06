@@ -9,7 +9,7 @@ console.log(`The navigator's name is ${hacker2}`);
 const hacker1Length = hacker1.length;
 const hacker2Length = hacker2.length;
 
-switch (hacker1Length && hacker2Length) {
+switch (true) {
     case  hacker1Length > hacker2Length:
         console.log(`The driver hast the longest name, it has ${hacker1Length} characters.`);
         break;
@@ -50,9 +50,6 @@ if (hacker1Length <= hacker2Length) {
 }
 
 for (let i = 0; i < shortestNameLength; i++) {
-    console.log(hacker1[i]);
-    console.log(hacker2[i]);
-    console.log(hacker1[i] === hacker2[i]);
     if (hacker1[i] < hacker2[i]) {
         console.log(`The driver's name goes first.`);
         break;
@@ -119,3 +116,32 @@ function countEt(text) {
 console.log(countEt(longText));
 
 
+//Bonus 2
+function isPalindrome(phraseToCheck) {
+    const onlyLetterRegex = /[a-zA-Z]+/;
+
+    let cleanString = "";
+    //Remove any non letter characters and set each letter character to lower space
+    for(let i = 0; i < phraseToCheck.length; i++) {
+        if (onlyLetterRegex.test(phraseToCheck[i])) {
+            cleanString += phraseToCheck[i].toLowerCase();
+        }
+    }
+
+    let reversedString = "";
+    //Reverse the cleaned up string
+    for (let i = cleanString.length - 1; i >= 0; i--) {
+        reversedString += cleanString[i];
+    }
+
+    const isPalindrome = cleanString === reversedString;
+    return isPalindrome;
+}
+
+let phrase1 = "A man, a plan, a canal, Panama!";
+let phrase2 = "Amor, Roma";
+let phrase3 = `No 'x' in Nixon`;
+
+console.log(isPalindrome(phrase1));
+console.log(isPalindrome(phrase2));
+console.log(isPalindrome(phrase3));
